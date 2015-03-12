@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'chat-app',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://ember-bootstrap.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
