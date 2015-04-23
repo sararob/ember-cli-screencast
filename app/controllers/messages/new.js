@@ -8,7 +8,8 @@ export default Ember.Controller.extend({
         addMessage: function() {
             var newMessage = this.store.createRecord('message', {
                 name: this.get('name'),
-                body: this.get('body')
+                body: this.get('body'),
+                timestamp: Date.now()
             });
             newMessage.save().then(function() {
                 this.set('body', '');
